@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Masterhuthiu/naf-server#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^4.19.2",
     "socket.io": "2.4.1"
   },
