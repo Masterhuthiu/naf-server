@@ -1,23 +1,21 @@
 const express = require("express");
 const http = require("http");
-const { Server } = require("socket.io");
 const cors = require("cors");
+const { Server } = require("socket.io"); // <-- đúng cho v4
 
 const app = express();
 
-/* ================= CORS ================= */
-app.use(cors({
-    origin: "*",
-    methods: ["GET", "POST"]
-}));
+/* ========= CORS ========= */
+app.use(cors({ origin: "*" }));
 
 app.get("/", (req, res) => {
     res.send("NAF Server is running");
 });
 
-/* ================= SOCKET ================= */
+/* ========= HTTP ========= */
 const server = http.createServer(app);
 
+/* ========= SOCKET.IO ========= */
 const io = new Server(server, {
     cors: {
         origin: "*",
@@ -34,8 +32,8 @@ io.on("connection", (socket) => {
     });
 });
 
-/* ================= PORT ================= */
-const PORT = process.env.PORT || 3000;
+/* ========= PORT ========= */
+const PORT = process.env.PORT || 10000;
 
 server.listen(PORT, () => {
     console.log("Server running on port", PORT);
