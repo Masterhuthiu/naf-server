@@ -1,16 +1,22 @@
 {
   "name": "naf-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Networked-AFrame Socket.io signaling server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Masterhuthiu/naf-server.git"
   },
-  "keywords": [],
+  "keywords": [
+    "networked-aframe",
+    "socket.io",
+    "metaverse",
+    "webrtc"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,7 +24,10 @@
   },
   "homepage": "https://github.com/Masterhuthiu/naf-server#readme",
   "dependencies": {
-    "express": "^5.2.1",
-    "socket.io": "^4.8.3"
+    "express": "^4.19.2",
+    "socket.io": "2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
