@@ -15,9 +15,10 @@
     "networked-aframe",
     "socket.io",
     "metaverse",
-    "webrtc"
+    "webrtc",
+    "easyrtc"
   ],
-  "author": "",
+  "author": "Masterhuthiu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Masterhuthiu/naf-server/issues"
@@ -28,9 +29,10 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "easyrtc": "^1.1.0",
     "express": "^4.19.2",
-    "networked-aframe": "^0.12.0",
-    "socket.io": "^4.8.1"
+    "networked-aframe": "0.12.0",
+    "socket.io": "^4.7.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
